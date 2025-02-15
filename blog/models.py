@@ -1,6 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+def get_default_author():
+    return User.objects.filter(is_superuser=True).first()
+
 class Post(models.Model):
     DRAFT = 'draft'
     PUBLISHED = 'published'
@@ -13,7 +16,7 @@ class Post(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     objects = models.Manager() # there was some kinda error and it shut up because of this, so keep it?
-    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=get_default_author)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=DRAFT)
 
     def __str__(self):
