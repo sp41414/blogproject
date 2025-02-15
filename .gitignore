@@ -1,0 +1,56 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# PyCharm #
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea_modules/
+
+# Python #*
+.py[cod] 
+*$py.class 
+*.so 
+.Python 
+build/ 
+develop-eggs/ 
+dist/ 
+downloads/ 
+eggs/ 
+.eggs/ 
+lib/ 
+lib64/ 
+parts/ 
+sdist/ 
+var/ 
+wheels/ 
+*.egg-info/ 
+.installed.cfg 
+*.egg 
+MANIFEST
+# enviroments #
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/
+# VS Code #
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook #
+.ipynb_checkpoints
+
+# Secret keys
+*.pem
+*_secret_*

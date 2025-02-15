@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+<h1>Signup</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" id="sign-up-href" class="btn-submit">Signup</button>
+</form>
+<p>Already have an account? <a href="{% url 'blog:login' %}" class="nav-button">Login</a></p>
+{% endblock %}
+

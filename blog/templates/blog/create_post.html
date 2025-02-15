@@ -1,0 +1,18 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Create a new post{% endblock %}
+
+{% block content %}
+<h1>Create a new blog post</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div class="form">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" id="post" class="btn-submit">Post</button>
+</form>
+<form action="{% url 'blog:home' %}" method="get">
+    <button type="submit" class="nav-button">Back to Home</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p><small>Posted on {{ post.created_at }}</small></p>
+<p>{{ post.content }}</p>
+{% if user == post.author %}
+    <form action="{% url 'blog:edit_post' post.id %}" method="get">
+        <button type="submit" class="nav-button">Edit Post</button>
+    </form>
+    <form action="{% url 'blog:delete_post' post.id %}" method="get">
+        <button type="submit" class="nav-button btn-danger">Delete Post</button>
+    </form>
+{% endif %}
+
+<form action="{% url 'blog:home' %}" method="get">
+    <button type="submit" class="nav-button">← Back to Home</button>
+</form>
+{% endblock %}
+

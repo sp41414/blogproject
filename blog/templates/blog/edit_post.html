@@ -1,0 +1,25 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h1>Edit Post</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div class="form">
+        <div class="title-edit">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="{{ post.title }}">
+        </div>
+        <div class="content-edit">
+            <label for="content">Content</label>
+            <textarea name="content">{{ post.content }}</textarea>
+        </div>
+        <div class="save-changes">
+            <button type="submit" class="btn-submit">Save changes</button>
+        </div>
+    </div>
+</form>
+<form action="{% url 'blog:post_detail' post.id %}" method="get">
+    <button type="submit" class="nav-button">Cancel</button>
+</form>
+{% endblock %}
+
