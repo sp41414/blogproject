@@ -50,6 +50,7 @@ CSS inspiration and like 80 of the lines from [midnight-discord](https://github.
 
 5. Setup the database
    ```bash
+   python manage.py makemigrations blog
    python manage.py migrate
    ```
 
