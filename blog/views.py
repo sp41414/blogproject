@@ -52,7 +52,7 @@ def signup_view(request):
             else:
                 user = form.save()
                 login(request, user)
-                return redirect("home")
+                return redirect("blog:home")
     else:
         form = SignupForm()
     return render(request, "blog/signup.html", {"form": form})
