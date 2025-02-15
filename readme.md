@@ -67,6 +67,10 @@ CSS inspiration and like 80 of the lines from [midnight-discord](https://github.
      from django.core.management.utils import get_random_secret_key
      print(get_random_secret_key())
      ```
+   - Or use the script included
+     ```bash
+      python key_generator.py
+     ```
 
 ## Running the Development Server
 
