@@ -1,6 +1,7 @@
 # Django Blog Project
 
 Simple django blog app that allows users to create edit and delete posts.
+(it might break at some point because of a database error that im too stupid to fix currently)
 
 ## Credits
 
