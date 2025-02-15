@@ -2,7 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 
 def get_default_author():
-    return User.objects.filter(is_superuser=True).first()
+    user = User.objects.filter(is_superuser=True).first()
+    return user.id if user else None
 
 class Post(models.Model):
     DRAFT = 'draft'
